@@ -1,0 +1,44 @@
+{{ define "home" }}
+{{template "cabecera"}}
+
+
+</br>
+<a name="" id="" class="btn btn-primary" href="/crear" role="button">Agregar Empleado</a>
+</br>
+</br>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{ range.}}
+        <tr>
+            <!--Mostramos lo de la base de datos en esta tabla-->
+            <td>{{.Id}}</td>
+            <td>{{.Nombre}}</td>
+            <td>{{.Correo}}</td>
+            <td>
+
+                <a name="" id="" class="btn btn-warning" href="/editar?id={{.Id}}" role="button">Editar</a>
+                <a name="" id="" class="btn btn-danger" href="/borrar?id={{.Id}}" role="button">Borrar</a>
+
+            </td>
+
+        </tr>
+        {{end}}
+    </tbody>
+</table>
+
+</div>
+
+
+
+
+{{ template "pie" }}
+{{ end }}

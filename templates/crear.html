@@ -1,0 +1,33 @@
+{{ define "crear"}}
+{{ template "cabecera"}}
+
+
+<div class="card">
+    <div class="card-header">
+        Empleados
+    </div>
+    <div class="card-body">
+        <form method="post" action="/insertar">
+            <div class="form-group">
+                <label for="">Nombre: </label>
+                <input type="text" class="form-control" name="nombre" id="nombre" aria-describedby="helpId"
+                    placeholder="Tu nombre">
+                <small id="helpId" class="form-text text-muted">*Campo obligatorio</small>
+            </div>
+            <div class="form-group">
+                <label for="">Correo: </label>
+                <input type="email" class="form-control" name="correo" id="correo" aria-describedby="emailHelpId"
+                    placeholder="Email">
+                <small id="emailHelpId" class="form-text text-muted">*Campo obligatorio</small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Agregar empleado</button>
+
+        </form>
+    </div>
+</div>
+
+
+
+{{ template "pie"}}
+{{end}}
